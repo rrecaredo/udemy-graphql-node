@@ -1,0 +1,21 @@
+{
+  "name": "graphql",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "start": "concurrently npm:server npm:live \"open http://localhost:4000\"",
+    "server": "nodemon ./index.js",
+    "live": "livereload ./index.js"
+  },
+  "dependencies": {
+    "@graphql-tools/graphql-file-loader": "^7.3.4",
+    "@graphql-tools/load": "^7.5.2",
+    "apollo-server": "^3.6.3",
+    "concurrently": "^7.0.0",
+    "graphql": "^16.3.0",
+    "nodemon": "^2.0.15",
+    "uuid": "^8.3.2"
+  }
+}
