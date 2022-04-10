@@ -1,0 +1,32 @@
+mutation($title: String!, $content: String!) {
+  postCreate(title: $title, content: $content) {
+    userErrors {
+      message
+    },
+    post {
+      title
+    }
+  }
+}
+
+mutation($postId: ID!) {
+  deletePost(postId: $postId) {
+    userErrors {
+      message
+    }
+    post {
+      id
+    }
+  }
+}
+
+mutation {
+  deletePost(postId: 1) {
+    userErrors {
+      message
+    }
+    post {
+      id
+    }
+  }
+}
