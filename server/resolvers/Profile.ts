@@ -1,5 +1,5 @@
-import { Post, User } from "@prisma/client";
-import { Context } from "../..";
+import { User } from "@prisma/client";
+import { Context } from "..";
 
 type ProfileParentType = {
     id: number;
@@ -7,7 +7,7 @@ type ProfileParentType = {
     userId: number;
 }
 
-export const profileResolvers = {
+export const Profile = {
     user: async ({ userId }: ProfileParentType, _: any, { prisma }: Context): Promise<User|null> => {
         return prisma.user.findUnique({
             where: {
